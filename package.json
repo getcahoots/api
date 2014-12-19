@@ -1,0 +1,41 @@
+{
+  "name": "cahoots-backend",
+  "version": "1.0.0-alpha0",
+  "description": "The backend of Cahoots.pw",
+  "main": "index.js",
+  "scripts": {
+    "test": "gulp test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/akoenig/cahoots-backend.git"
+  },
+  "keywords": [
+    "cahoots.pw",
+    "backend",
+    "rest"
+  ],
+  "author": "Cahoots.pw",
+  "contributors": [
+      {
+          "name": "Alexander Barnickel",
+          "email": "artingei@gmail.com",
+          "url": "http://cahoots.pw"
+      },
+      {
+          "name": "Jonas Bergmeier",
+          "email": "jonas.bergmeier@gmail.com",
+          "url": "http://cahoots.pw"
+      },
+      {
+          "name" : "André König",
+          "email" : "andre.koenig@posteo.de",
+          "url" : "http://andrekoenig.info"
+      }
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/akoenig/cahoots-backend/issues"
+  },
+  "homepage": "https://github.com/akoenig/cahoots-backend"
+}
