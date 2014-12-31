@@ -4,11 +4,13 @@
   "description": "The backend of Cahoots.pw",
   "main": "index.js",
   "scripts": {
+    "lint": "gulp lint",
+    "checkstyle": "gulp checkstyle",
     "test": "gulp test"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/akoenig/cahoots-backend.git"
+    "url": "https://github.com/cahoots-extension/backend.git"
   },
   "keywords": [
     "cahoots.pw",
@@ -17,25 +19,33 @@
   ],
   "author": "Cahoots.pw",
   "contributors": [
-      {
-          "name": "Alexander Barnickel",
-          "email": "artingei@gmail.com",
-          "url": "http://cahoots.pw"
-      },
-      {
-          "name": "Jonas Bergmeier",
-          "email": "jonas.bergmeier@gmail.com",
-          "url": "http://cahoots.pw"
-      },
-      {
-          "name" : "André König",
-          "email" : "andre.koenig@posteo.de",
-          "url" : "http://andrekoenig.info"
-      }
+    {
+      "name": "Alexander Barnickel",
+      "email": "artingei@gmail.com",
+      "url": "http://cahoots.pw"
+    },
+    {
+      "name": "Jonas Bergmeier",
+      "email": "jonas.bergmeier@gmail.com",
+      "url": "http://cahoots.pw"
+    },
+    {
+      "name": "André König",
+      "email": "andre.koenig@posteo.de",
+      "url": "http://andrekoenig.info"
+    }
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/akoenig/cahoots-backend/issues"
+    "url": "https://github.com/cahoots-extension/backend/issues"
   },
-  "homepage": "https://github.com/akoenig/cahoots-backend"
+  "homepage": "https://github.com/cahoots-extension/backend",
+  "devDependencies": {
+    "gulp": "^3.8.10",
+    "gulp-jscs": "^1.3.1",
+    "gulp-jshint": "^1.9.0",
+    "gulp-mocha": "^2.0.0",
+    "jshint-stylish": "^1.0.0",
+    "run-sequence": "^1.0.2"
+  }
 }
