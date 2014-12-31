@@ -4,10 +4,16 @@
   "description": "The backend of Cahoots.pw",
   "main": "index.js",
   "scripts": {
+    "test": "gulp",
     "lint": "gulp lint",
-    "checkstyle": "gulp checkstyle",
-    "test": "gulp test"
+    "specs": "gulp specs",
+    "checkstyle": "gulp checkstyle"
   },
+  "pre-commit": [
+    "lint",
+    "checkstyle",
+    "specs"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/cahoots-extension/backend.git"
@@ -46,6 +52,7 @@
     "gulp-jshint": "^1.9.0",
     "gulp-mocha": "^2.0.0",
     "jshint-stylish": "^1.0.0",
+    "pre-commit": "0.0.9",
     "run-sequence": "^1.0.2"
   }
 }
