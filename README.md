@@ -6,7 +6,7 @@ You find a rough architecture description in the [wiki](https://github.com/akoen
 
 ## Usage
 
-We use [docker]() in order to run the backend.
+We use [docker](https://docker.io) in order to run the backend.
 
 After cloning the repository
 
