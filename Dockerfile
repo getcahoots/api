@@ -1,7 +1,6 @@
 FROM node:0.10
 MAINTAINER André König <andre.koenig@posteo.de>
 
-RUN apt-get update && apt-get install -y git
 RUN useradd --create-home cahoots
 
 RUN npm update npm
@@ -11,5 +10,7 @@ ENV DEBUG cahoots:*
 
 EXPOSE 8080
 
+WORKDIR /home/cahoots
 USER cahoots
 CMD "cahoots-backend"
+
