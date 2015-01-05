@@ -8,7 +8,7 @@ RUN npm i -g git+https://github.com/akoenig/cahoots-backend.git
 
 ENV DEBUG cahoots:*
 
-EXPOSE 8080
+EXPOSE 9090
 
 WORKDIR /home/cahoots
 USER cahoots

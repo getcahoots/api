@@ -23,13 +23,13 @@ $ docker build -t cahoots.pw/backend .
 Afterwards you're able to spin-off a container out of the image via:
 
 ```sh
-$ docker run -d -p 8080:8080 cahoots.pw/backend
+$ docker run -d -p 9090:9090 cahoots.pw/backend
 ```
 
 Now you can send HTTP requests to the API. An example:
 
 ```sh
-$ curl http://localhost:8080/persons
+$ curl http://localhost:9090/persons
 ```
 
 Should be an empty response at the moment :)
