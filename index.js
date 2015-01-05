@@ -12,3 +12,22 @@
  */
 
 'use strict';
+
+module.exports = function instantiate () {
+    var backend = new CahootsBackend();
+
+    return {
+        boot: backend.boot.bind(backend),
+        shutdown: backend.shutdown.bind(backend)
+    };
+};
+
+function CahootsBackend () {}
+
+CahootsBackend.prototype.boot = function boot () {
+
+};
+
+CahootsBackend.prototype.shutdown = function shutdown () {
+
+};
