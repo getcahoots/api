@@ -32,6 +32,13 @@ function Backend () {
     };
 }
 
+/**
+ * Boots the cahoots.pw backend.
+ *
+ * @param {function} callback
+ * Will be executed when the whole backend has been started. Executed as `callback(err)`.
+ *
+ */
 Backend.prototype.boot = function boot (callback) {
 
     function onBoot (err) {
@@ -47,6 +54,13 @@ Backend.prototype.boot = function boot (callback) {
     this.$apps.api.boot(onBoot);
 };
 
+/**
+ * Shuts a running cahoots.pw backend instance down.
+ *
+ * @param {function} callback
+ * Will be executed when the backend has been shutted down. Executed as `callback(err)`.
+ *
+ */
 Backend.prototype.shutdown = function shutdown (callback) {
     function onShutdown (err) {
         if (err) {
