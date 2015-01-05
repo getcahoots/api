@@ -57,6 +57,7 @@
     "run-sequence": "^1.0.2"
   },
   "dependencies": {
+    "body-parser": "^1.10.1",
     "cahoots-backend-services": "file:../services",
     "debug": "^2.1.1",
     "express": "^4.10.7",
