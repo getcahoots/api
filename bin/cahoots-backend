@@ -25,7 +25,7 @@ function onBoot (err) {
         return console.error(err.message);
     }
     
-    console.log('"%s" is running on port "%d".', pkg.name, port);
+    console.log('"%s" (v%s) is running on port "%d".', pkg.name, pkg.version, port);
 }
 
 backend.boot(onBoot);
