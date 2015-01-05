@@ -7,5 +7,5 @@ You find a rough architecture description in the [wiki](https://github.com/akoen
 ## Authors
 
   * [Jonas Bergmeier](mailto:jonas.bergmeier@gmail.com)
-  * [Alexander Barnickel](mailto:artingei@gmail.com)
+  * [Alexander Barnickel](mailto:alex@alba.io)
   * [André König](mailto:andre.koenig@posteo.de)
