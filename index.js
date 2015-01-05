@@ -13,12 +13,15 @@
 
 'use strict';
 
+var api = require('cahoots-backend-api');
 var VError = require('verror');
 
-var api = require('cahoots-backend-api');
+var pkg = require('./package.json');
 
 module.exports = function instantiate () {
     var backend = new Backend();
+
+    process.title = pkg.name;
 
     return {
         boot: backend.boot.bind(backend),
@@ -70,5 +73,5 @@ Backend.prototype.shutdown = function shutdown (callback) {
         callback(null);
     }
 
-    this.$apps.shutdown(onShutdown);
+    this.$apps.api.shutdown(onShutdown);
 };

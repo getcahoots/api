@@ -29,3 +29,17 @@ function onBoot (err) {
 }
 
 backend.boot(onBoot);
+
+process.on('SIGINT', function onSigint() {
+    function onShutdown (err) {
+        if (err) {
+            return console.error('Error while shutting the backend down: ' + err.message);
+        }
+
+        console.log('Bye!');
+    }
+
+    console.log('About to shutdown ...');
+
+    backend.shutdown(onShutdown);
+});
