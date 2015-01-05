@@ -3,6 +3,7 @@
   "version": "1.0.0-alpha0",
   "description": "The backend of Cahoots.pw",
   "main": "index.js",
+  "bin": "./bin/cahoots-backend",
   "scripts": {
     "test": "gulp",
     "lint": "gulp lint",

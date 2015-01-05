@@ -13,8 +13,12 @@
 
 'use strict';
 
+var VError = require('verror');
+
+var api = require('cahoots-backend-api');
+
 module.exports = function instantiate () {
-    var backend = new CahootsBackend();
+    var backend = new Backend();
 
     return {
         boot: backend.boot.bind(backend),
@@ -22,12 +26,35 @@ module.exports = function instantiate () {
     };
 };
 
-function CahootsBackend () {}
+function Backend () {
+    this.$apps = {
+        api: api()
+    };
+}
 
-CahootsBackend.prototype.boot = function boot () {
+Backend.prototype.boot = function boot (callback) {
 
+    function onBoot (err) {
+        if (err) {
+            return callback(new VError(err, 'failed to boot the RESTful API.'));
+        }
+
+        callback(null);
+    }
+
+    callback = callback || function noop () {};
+
+    this.$apps.api.boot(onBoot);
 };
 
-CahootsBackend.prototype.shutdown = function shutdown () {
+Backend.prototype.shutdown = function shutdown (callback) {
+    function onShutdown (err) {
+        if (err) {
+            return callback(new VError(err, 'failed to shutdown the RESTful API.'));
+        }
 
+        callback(null);
+    }
+
+    this.$apps.shutdown(onShutdown);
 };
