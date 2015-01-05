@@ -47,7 +47,10 @@
   },
   "homepage": "https://github.com/cahoots-extension/backend",
   "dependencies": {
-      "cahoots-backend-services": "./lib/services"
+    "cahoots-backend-api": "file:lib/api",
+    "debug": "^2.1.1",
+    "express": "^4.10.7",
+    "verror": "^1.6.0"
   },
   "devDependencies": {
     "gulp": "^3.8.10",

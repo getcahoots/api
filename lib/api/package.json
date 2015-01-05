@@ -1,7 +1,7 @@
 {
   "name": "cahoots-backend-api",
   "version": "1.0.0-alpha0",
-  "description": "The RESTful API of the Cahoots.pw backend.",
+  "description": "The RESTful API layer of the Cahoots.pw backend.",
   "main": "index.js",
   "scripts": {
     "test": "gulp",
@@ -57,8 +57,9 @@
     "run-sequence": "^1.0.2"
   },
   "dependencies": {
+    "cahoots-backend-services": "file:../services",
     "debug": "^2.1.1",
-    "mandatory": "^1.0.0",
+    "express": "^4.10.7",
     "verror": "^1.6.0"
   }
 }

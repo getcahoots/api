@@ -53,10 +53,10 @@
     "gulp-mocha": "^2.0.0",
     "jshint-stylish": "^1.0.0",
     "pre-commit": "0.0.9",
-    "run-sequence": "^1.0.2",
-    "cahoots-backend-daos": "../daos"
+    "run-sequence": "^1.0.2"
   },
   "dependencies": {
+    "cahoots-backend-daos": "file:../daos",
     "debug": "^2.1.1",
     "mandatory": "^1.0.0",
     "verror": "^1.6.0"
