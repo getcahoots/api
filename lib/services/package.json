@@ -56,7 +56,7 @@
     "run-sequence": "^1.0.2"
   },
   "dependencies": {
-    "cahoots-backend-daos": "file:../daos",
+    "cahoots-backend-storage": "file:../storage",
     "debug": "^2.1.1",
     "mandatory": "^1.0.0",
     "verror": "^1.6.0"
