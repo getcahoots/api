@@ -20,6 +20,7 @@
     "node": true,
     "globals": {
         "describe": false,
-        "it": false
+        "it": false,
+        "beforeEach": false
     }
 }
