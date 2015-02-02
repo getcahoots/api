@@ -1,0 +1,64 @@
+{
+  "name": "cahoots-backend-validator",
+  "version": "1.0.0-alpha0",
+  "description": "The validation module for checking incoming data structures.",
+  "main": "index.js",
+  "scripts": {
+    "test": "gulp",
+    "lint": "gulp lint",
+    "specs": "gulp specs",
+    "checkstyle": "gulp checkstyle"
+  },
+  "pre-commit": [
+    "lint",
+    "checkstyle",
+    "specs"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:cahoots-extension/backend.git"
+  },
+  "keywords": [
+    "cahoots.pw",
+    "validator",
+    "json"
+  ],
+  "author": "Cahoots.pw",
+  "contributors": [
+    {
+      "name": "Alexander Barnickel",
+      "email": "alex@alba.io",
+      "url": "http://cahoots.pw"
+    },
+    {
+      "name": "Jonas Bergmeier",
+      "email": "jonas.bergmeier@gmail.com",
+      "url": "http://cahoots.pw"
+    },
+    {
+      "name": "André König",
+      "email": "andre.koenig@posteo.de",
+      "url": "http://andrekoenig.info"
+    }
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cahoots-extension/backend/issues"
+  },
+  "homepage": "https://github.com/cahoots-extension/backend",
+  "devDependencies": {
+    "expect.js": "^0.3.1",
+    "gulp": "git://github.com/gulpjs/gulp",
+    "gulp-jscs": "^1.4.0",
+    "gulp-jshint": "^1.9.2",
+    "gulp-mocha": "^2.0.0",
+    "jshint-stylish": "^1.0.0",
+    "pre-commit": "0.0.9",
+    "run-sequence": "^1.0.2"
+  },
+  "dependencies": {
+    "debug": "^2.1.1",
+    "mandatory": "^1.0.0",
+    "verror": "^1.6.0"
+  }
+}
