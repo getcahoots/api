@@ -1,6 +1,6 @@
 {
-  "name": "cahoots-backend-schemes",
-  "version": "1.0.0-alpha0",
+  "name": "cahoots-api-schemes",
+  "version": "1.0.0",
   "description": "The schemes of the cahoots.pw data structures.",
   "main": "index.js",
   "scripts": {
@@ -14,7 +14,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git@github.com:cahoots-extension/backend.git"
+    "url": "git@github.com:cahoots-extension/api.git"
   },
   "keywords": [
     "cahoots.pw",
@@ -40,9 +40,9 @@
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/cahoots-extension/backend/issues"
+    "url": "https://github.com/cahoots-extension/api/issues"
   },
-  "homepage": "https://github.com/cahoots-extension/backend",
+  "homepage": "https://github.com/cahoots-extension/api",
   "devDependencies": {
     "gulp": "^3.8.10",
     "gulp-jscs": "^1.3.1",

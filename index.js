@@ -1,5 +1,5 @@
 /*
- * cahoots-backend
+ * cahoots-api
  *
  * Copyright Cahoots.pw
  * MIT Licensed
@@ -13,40 +13,38 @@
 
 'use strict';
 
-var api = require('cahoots-backend-api');
+var api = require('./app/');
 var VError = require('verror');
 
 var pkg = require('./package.json');
 
 module.exports = function instantiate () {
-    var backend = new Backend();
+    var app = new Application();
 
     process.title = pkg.name;
 
     return {
-        boot: backend.boot.bind(backend),
-        shutdown: backend.shutdown.bind(backend)
+        boot: app.boot.bind(app),
+        shutdown: app.shutdown.bind(app)
     };
 };
 
-function Backend () {
-    this.$apps = {
-        api: api()
-    };
+function Application () {
+    this.$api = api();
 }
 
 /**
- * Boots the cahoots.pw backend.
+ * Boots the cahoots.pw API.
  *
  * @param {function} callback
- * Will be executed when the whole backend has been started. Executed as `callback(err)`.
+ * Will be executed when the whole api has been started. Executed as `callback(err)`.
  *
  */
-Backend.prototype.boot = function boot (callback) {
+Application.prototype.boot = function boot (callback) {
 
     function onBoot (err) {
         if (err) {
-            return callback(new VError(err, 'failed to boot the RESTful API.'));
+            return callback(new VError(err, 'failed to boot %s', pkg.name));
         }
 
         callback(null);
@@ -54,24 +52,24 @@ Backend.prototype.boot = function boot (callback) {
 
     callback = callback || function noop () {};
 
-    this.$apps.api.boot(onBoot);
+    this.$api.boot(onBoot);
 };
 
 /**
- * Shuts a running cahoots.pw backend instance down.
+ * Shuts a running cahoots.pw API instance down.
  *
  * @param {function} callback
- * Will be executed when the backend has been shutted down. Executed as `callback(err)`.
+ * Will be executed when the API has been shutted down. Executed as `callback(err)`.
  *
  */
-Backend.prototype.shutdown = function shutdown (callback) {
+Application.prototype.shutdown = function shutdown (callback) {
     function onShutdown (err) {
         if (err) {
-            return callback(new VError(err, 'failed to shutdown the RESTful API.'));
+            return callback(new VError(err, 'failed to shutdown %s', pkg.name));
         }
 
         callback(null);
     }
 
-    this.$apps.api.shutdown(onShutdown);
+    this.$api.shutdown(onShutdown);
 };

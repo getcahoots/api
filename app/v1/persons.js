@@ -1,5 +1,5 @@
 /*
- * cahoots-backend-api
+ * cahoots-api
  *
  * Copyright Cahoots.pw
  * MIT Licensed
@@ -15,19 +15,19 @@
 
 var http = require('http');
 
-var debug = require('debug')('cahoots:backend:api:PersonsResource');
+var debug = require('debug')('cahoots:api:PersonsResource');
 
-var services = require('cahoots-backend-services');
-var schemes = require('cahoots-backend-schemes');
-var validator = require('cahoots-backend-validator');
+var services = require('cahoots-api-services');
+var schemes = require('cahoots-api-schemes');
+var validator = require('cahoots-api-validator');
 
 module.exports = function instantiate () {
     var resource = new PersonsResource();
 
     return [
-        {path: '/', method: 'GET', handler: resource.list.bind(resource)},
-        {path: '/:id', method: 'GET', handler: resource.one.bind(resource)},
-        {path: '/', method: 'POST', handler: resource.insert.bind(resource)}
+        {path: '/persons', method: 'GET', handler: resource.list.bind(resource)},
+        {path: '/persons/:id', method: 'GET', handler: resource.one.bind(resource)},
+        {path: '/persons', method: 'POST', handler: resource.insert.bind(resource)}
     ];
 };
 

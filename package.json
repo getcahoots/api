@@ -1,9 +1,9 @@
 {
-  "name": "cahoots-backend",
-  "version": "1.0.0-alpha0",
-  "description": "The backend of Cahoots.pw",
+  "name": "cahoots-api",
+  "version": "1.0.0",
+  "description": "The cahoots.pw RESTful API",
   "main": "index.js",
-  "bin": "./bin/cahoots-backend",
+  "bin": "./bin/cahoots-api",
   "scripts": {
     "test": "gulp",
     "lint": "gulp lint",
@@ -15,13 +15,16 @@
     "checkstyle",
     "specs"
   ],
+  "engine": {
+      "iojs": "^1.1.0"
+  },
   "repository": {
     "type": "git",
-    "url": "https://github.com/cahoots-extension/backend.git"
+    "url": "https://github.com/cahoots-extension/api.git"
   },
   "keywords": [
     "cahoots.pw",
-    "backend",
+    "api",
     "rest"
   ],
   "author": "Cahoots.pw",
@@ -44,14 +47,17 @@
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/cahoots-extension/backend/issues"
+    "url": "https://github.com/cahoots-extension/api/issues"
   },
-  "homepage": "https://github.com/cahoots-extension/backend",
+  "homepage": "https://github.com/cahoots-extension/api",
   "dependencies": {
-    "cahoots-backend-api": "file:lib/api",
-    "debug": "^2.1.1",
-    "express": "^4.10.7",
-    "verror": "^1.6.0"
+      "body-parser": "^1.10.1",
+      "cahoots-api-schemes": "file:./lib/schemes",
+      "cahoots-api-services": "file:./lib/services",
+      "cahoots-api-validator": "file:./lib/validator",
+      "debug": "^2.1.1",
+      "express": "^4.10.7",
+      "verror": "^1.6.0"
   },
   "devDependencies": {
     "gulp": "^3.8.10",

@@ -1,7 +1,7 @@
 {
-  "name": "cahoots-backend-storage",
+  "name": "cahoots-api-storage",
   "version": "1.0.0-alpha0",
-  "description": "The storage layer of the Cahoots.pw backend.",
+  "description": "The storage layer of the cahoots.pw api.",
   "main": "index.js",
   "scripts": {
     "test": "gulp",
@@ -16,7 +16,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git@github.com:cahoots-extension/backend.git"
+    "url": "git@github.com:cahoots-extension/api.git"
   },
   "keywords": [
     "cahoots.pw",
@@ -42,9 +42,9 @@
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/cahoots-extension/backend/issues"
+    "url": "https://github.com/cahoots-extension/api/issues"
   },
-  "homepage": "https://github.com/cahoots-extension/backend",
+  "homepage": "https://github.com/cahoots-extension/api",
   "devDependencies": {
     "expect.js": "^0.3.1",
     "gulp": "^3.8.10",

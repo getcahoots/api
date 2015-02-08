@@ -1,5 +1,5 @@
 /*
- * cahoots-backend
+ * cahoots-api
  *
  * Copyright Cahoots.pw
  * MIT Licensed
@@ -25,6 +25,7 @@ var paths = {};
 
 paths.sources = [
     path.join(__dirname, '*.js'),
+    path.join(__dirname, 'app', '**', '*.js'),
     path.join(__dirname, 'specs', '**', '*.spec.js')
 ];
 
