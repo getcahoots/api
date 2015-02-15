@@ -21,6 +21,8 @@ var services = require('cahoots-api-services');
 var schemes = require('cahoots-api-schemes');
 var validator = require('cahoots-api-validator');
 
+var middlewares = require('./middlewares/');
+
 module.exports = function instantiate () {
     var resource = new OrganizationsResource();
 
@@ -38,7 +40,8 @@ module.exports = function instantiate () {
         {
             method: 'POST',
             path: '/organizations',
-            handler: resource.insert.bind(resource)
+            handler: resource.insert.bind(resource),
+            middlewares: [middlewares.authentication()]
         }
     ];
 };

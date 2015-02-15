@@ -15,7 +15,8 @@
 
 var resources = {
     organizations: require('./organizations'),
-    persons: require('./persons')
+    persons: require('./persons'),
+    tokens: require('./tokens')
 };
 
 module.exports = function instantiate () {
