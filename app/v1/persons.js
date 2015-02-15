@@ -25,9 +25,21 @@ module.exports = function instantiate () {
     var resource = new PersonsResource();
 
     return [
-        {path: '/persons', method: 'GET', handler: resource.list.bind(resource)},
-        {path: '/persons/:id', method: 'GET', handler: resource.one.bind(resource)},
-        {path: '/persons', method: 'POST', handler: resource.insert.bind(resource)}
+        {
+            method: 'GET',
+            path: '/persons',
+            handler: resource.list.bind(resource)
+        },
+        {
+            method: 'GET',
+            path: '/persons/:id',
+            handler: resource.one.bind(resource)
+        },
+        {
+            method: 'POST',
+            path: '/persons',
+            handler: resource.insert.bind(resource)
+        }
     ];
 };
 

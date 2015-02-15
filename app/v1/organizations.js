@@ -25,9 +25,21 @@ module.exports = function instantiate () {
     var resource = new OrganizationsResource();
 
     return [
-        {path: '/organizations', method: 'GET', handler: resource.list.bind(resource)},
-        {path: '/organizations/:id', method: 'GET', handler: resource.one.bind(resource)},
-        {path: '/organizations', method: 'POST', handler: resource.insert.bind(resource)}
+        {
+            method: 'GET',
+            path: '/organizations',
+            handler: resource.list.bind(resource)
+        },
+        {
+            method: 'GET',
+            path: '/organizations/:id',
+            handler: resource.one.bind(resource)
+        },
+        {
+            method: 'POST',
+            path: '/organizations',
+            handler: resource.insert.bind(resource)
+        }
     ];
 };
 
