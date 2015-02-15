@@ -59,7 +59,12 @@ API.prototype.$mount = function $mount () {
 
         for (let resource in resources) {
             let action = resources[resource];
-            router[action.method.toLowerCase()](action.path, action.handler);
+
+            if (action.middlewares) {
+                router[action.method.toLowerCase()](action.path, action.middlewares, action.handler);
+            } else {
+                router[action.method.toLowerCase()](action.path, action.handler);
+            }
 
             debug('Mounted resource "%s %s"', action.method, action.path);
         }
