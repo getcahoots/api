@@ -16,7 +16,7 @@
     "specs"
   ],
   "engine": {
-      "iojs": "^1.1.0"
+    "iojs": "^1.1.0"
   },
   "repository": {
     "type": "git",
@@ -27,7 +27,7 @@
     "api",
     "rest"
   ],
-  "author": "Cahoots.pw",
+  "author": "cahoots.pw",
   "contributors": [
     {
       "name": "Alexander Barnickel",
@@ -51,14 +51,15 @@
   },
   "homepage": "https://github.com/cahoots-extension/api",
   "dependencies": {
-      "body-parser": "^1.10.1",
-      "cahoots-api-schemes": "file:./lib/schemes",
-      "cahoots-api-services": "file:./lib/services",
-      "cahoots-api-validator": "file:./lib/validator",
-      "cahoots-api-tokenstore": "file:./lib/tokenstore",
-      "debug": "^2.1.1",
-      "express": "^4.10.7",
-      "verror": "^1.6.0"
+    "body-parser": "^1.10.1",
+    "cahoots-api-schemes": "file:./lib/schemes",
+    "cahoots-api-services": "file:./lib/services",
+    "cahoots-api-tokenstore": "file:./lib/tokenstore",
+    "cahoots-api-validator": "file:./lib/validator",
+    "cors": "^2.5.3",
+    "debug": "^2.1.1",
+    "express": "^4.10.7",
+    "verror": "^1.6.0"
   },
   "devDependencies": {
     "gulp": "^3.8.10",

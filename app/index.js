@@ -14,6 +14,7 @@
 'use strict';
 
 var express = require('express');
+var cors = require('cors');
 var bodyparser = require('body-parser');
 var VError = require('verror');
 
@@ -115,6 +116,8 @@ API.prototype.boot = function boot (port, host, callback) {
     this.$web = express();
     this.$web.use(bodyparser.json());
     this.$web.disable('x-powered-by');
+
+    this.$web.use(cors());
 
     if (process.env.NODE_ENV !== 'production') {
         this.$web.set('json spaces', 4);
