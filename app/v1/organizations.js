@@ -108,6 +108,8 @@ OrganizationsResource.prototype.one = function one (req, res) {
             return res.status(404).json({});
         }
 
+        debug('Found one organization by id "%s": %j', id, organization);
+
         res.status(200).json(organization);
     }
 
@@ -133,6 +135,8 @@ OrganizationsResource.prototype.list = function list (req, res) {
         if (!organizations.length) {
             return res.status(404).json(organizations);
         }
+
+        debug('Found %d organization(s)', organizations.length);
 
         res.status(200).json(organizations);
     }
