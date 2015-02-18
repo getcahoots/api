@@ -59,6 +59,11 @@ TokensResource.prototype.authenticate = function authenticate (req, res) {
             return res.status(500).send(http.STATUS_CODES[500]);
         }
 
+        if (!account) {
+            debug('Account with email address "%s" not found (authenticate).', credentials.email);
+            return res.status(400).send(http.STATUS_CODES[400]);
+        }
+
         account.token = tokenstore().put(account);
 
         res.status(201).json(account);
