@@ -1,4 +1,4 @@
-FROM iojs:1.3.0
+FROM iojs:1.2.0
 MAINTAINER André König <andre.koenig@posteo.de>
 
 RUN useradd --create-home cahoots
