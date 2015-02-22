@@ -1,15 +1,12 @@
-FROM iojs:1.1.0
+FROM iojs:1.3.0
 MAINTAINER André König <andre.koenig@posteo.de>
 
 RUN useradd --create-home cahoots
 
-RUN npm update npm
-RUN npm i -g git+https://github.com/cahoots-extension/api.git
+ADD ./ /home/cahoots/
 
-ENV DEBUG cahoots:*
-
-EXPOSE 9090
+EXPOSE 8080
 
 WORKDIR /home/cahoots
 USER cahoots
-CMD "cahoots-api"
+CMD "./bin/cahoots-api"
