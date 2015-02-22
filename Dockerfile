@@ -9,4 +9,6 @@ EXPOSE 8080
 
 WORKDIR /home/cahoots
 USER cahoots
+RUN npm i
+
 CMD "./bin/cahoots-api"
