@@ -119,6 +119,13 @@ API.prototype.boot = function boot (port, host, callback) {
 
     this.$web.use(cors());
 
+    this.$web.get('/', function onRoot (req, res) {
+        res.status(200).json({
+            name: 'cahoots-api',
+            info: 'https://github.com/cahoots-extension/api/wiki'
+        });
+    });
+
     if (process.env.NODE_ENV !== 'production') {
         this.$web.set('json spaces', 4);
     }
