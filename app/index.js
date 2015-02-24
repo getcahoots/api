@@ -117,9 +117,7 @@ API.prototype.boot = function boot (port, host, callback) {
     this.$web.use(bodyparser.json());
     this.$web.disable('x-powered-by');
 
-    this.$web.use(cors({
-        origin: true
-    }));
+    this.$web.use(cors());
 
     this.$web.get('/', function onRoot (req, res) {
         res.status(200).json({
