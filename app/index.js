@@ -122,7 +122,7 @@ API.prototype.boot = function boot (port, host, callback) {
     this.$web.get('/', function onRoot (req, res) {
         res.status(200).json({
             name: 'cahoots-api',
-            info: 'https://github.com/cahoots-extension/api/wiki'
+            info: 'https://github.com/getcahoots/api/wiki'
         });
     });
 
