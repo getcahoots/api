@@ -16,11 +16,11 @@
     "specs"
   ],
   "engine": {
-    "iojs": "^1.1.0"
+    "iojs": "^1.3.0"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/cahoots-extension/api.git"
+    "url": "git@github.com:getcahoots/api.git"
   },
   "keywords": [
     "cahoots.pw",
@@ -31,25 +31,32 @@
   "contributors": [
     {
       "name": "Alexander Barnickel",
-      "email": "alex@alba.io",
-      "url": "http://cahoots.pw"
+      "email": "alex@cahoots.ninja"
     },
     {
       "name": "Jonas Bergmeier",
-      "email": "jonas.bergmeier@gmail.com",
-      "url": "http://cahoots.pw"
+      "email": "jonas@cahoots.ninja",
+      "url": "http://jonasbergmeier.net"
+    },
+    {
+      "name": "Oliver Sommer",
+      "email": "oliver@cahoots.ninja"
+    },
+    {
+      "name": "Julian Fath",
+      "email": "julian@cahoots.ninja"
     },
     {
       "name": "André König",
-      "email": "andre.koenig@posteo.de",
+      "email": "andre@cahoots.ninja",
       "url": "http://andrekoenig.info"
     }
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/cahoots-extension/api/issues"
+    "url": "https://github.com/getcahoots/api/issues"
   },
-  "homepage": "https://github.com/cahoots-extension/api",
+  "homepage": "https://github.com/getcahoots/api",
   "dependencies": {
     "body-parser": "^1.10.1",
     "cahoots-api-schemes": "file:./lib/schemes",
