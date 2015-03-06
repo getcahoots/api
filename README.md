@@ -2,7 +2,7 @@
 
 This repository contains the API of the [cahoots.pw](http://cahoots.pw) project.
 
-You find a rough architecture description in the [wiki](https://github.com/cahoots-extension/api/wiki).
+You find a rough architecture description in the [wiki](https://github.com/getcahoots/api/wiki).
 
 ## Usage
 
