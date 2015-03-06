@@ -104,8 +104,12 @@ PersonsResource.prototype.one = function one (req, res) {
         }
 
         if (!person) {
+            debug('Tried to find the person with the id "%s". Not available.', id);
+
             return res.status(404).json({});
         }
+
+        debug('Requested person with the id "%s".', id);
 
         res.status(200).json(person);
     }
@@ -128,8 +132,12 @@ PersonsResource.prototype.list = function list (req, res) {
         }
 
         if (!persons.length) {
+            debug('Tried to find a list with all persons, but there are no persons.');
+
             return res.status(404).json(persons);
         }
+
+        debug('Requested all persons (Found: %d persons).', persons.length);
 
         res.status(200).json(persons);
     }
