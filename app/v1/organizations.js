@@ -136,7 +136,7 @@ OrganizationsResource.prototype.list = function list (req, res) {
             return res.status(404).json(organizations);
         }
 
-        debug('Found %d organization(s)', organizations.length);
+        debug('Found %d organization(s).', organizations.length);
 
         res.status(200).json(organizations);
     }
@@ -144,8 +144,12 @@ OrganizationsResource.prototype.list = function list (req, res) {
     if (ids && ids.indexOf(',') !== -1) {
         ids = ids.split(',');
 
+        debug('Requested organizations by specific ids: %s', ids);
+
         return this.$service.findByIds(ids, onFind);
     }
+
+    debug('Requested all organizations.');
 
     this.$service.findAll(onFind);
 };
