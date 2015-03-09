@@ -20,6 +20,8 @@ var VError = require('verror');
 
 var debug = require('debug')('cahoots:api');
 
+var pkg = require('../package.json');
+
 var versions = {
     v1: require('./v1')
 };
@@ -122,7 +124,8 @@ API.prototype.boot = function boot (port, host, callback) {
     this.$web.get('/', function onRoot (req, res) {
         res.status(200).json({
             name: 'cahoots-api',
-            info: 'https://github.com/getcahoots/api/wiki'
+            info: 'https://github.com/getcahoots/api/wiki',
+            version: pkg.version
         });
     });
 
