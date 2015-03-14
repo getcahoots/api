@@ -8,7 +8,8 @@
     "test": "gulp",
     "lint": "gulp lint",
     "specs": "gulp specs",
-    "checkstyle": "gulp checkstyle"
+    "checkstyle": "gulp checkstyle",
+    "start": "npm install && ./bin/cahoots-api"
   },
   "pre-commit": [
     "lint",
@@ -44,7 +45,7 @@
     },
     {
       "name": "Julian Fath",
-      "email": "julian@cahoots.ninja"
+      "email": "presse@cahoots.ninja"
     },
     {
       "name": "André König",

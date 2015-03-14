@@ -1,7 +1,7 @@
 {
   "name": "cahoots-api-storage",
-  "version": "1.0.0-alpha0",
-  "description": "The storage layer of the cahoots.pw api.",
+  "version": "1.0.0",
+  "description": "The storage layer of the Cahoots RESTful API.",
   "main": "index.js",
   "scripts": {
     "test": "gulp",
@@ -39,7 +39,7 @@
     },
     {
       "name": "Julian Fath",
-      "email": "julian@cahoots.ninja"
+      "email": "presse@cahoots.ninja"
     },
     {
       "name": "André König",

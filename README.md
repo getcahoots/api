@@ -4,6 +4,22 @@ This repository contains the API of the [cahoots.pw](http://cahoots.pw) project.
 
 You find a rough architecture description in the [wiki](https://github.com/getcahoots/api/wiki).
 
+## Usage
+
+Please note that you need a current release (1.x) of [io.js](https://iojs.org) in order to run the Cahoots RESTful API. You can start the API with:
+
+```sh
+npm start
+```
+
+### Debug log messages
+
+You can set an environment variable in order to see some debug log messages:
+
+```sh
+DEBUG=cahoots:* npm start
+```
+
 ## License
 
 The MIT License (MIT)
