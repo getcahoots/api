@@ -1,3 +1,41 @@
+# Cahoots - RESTful API - TokenStore
+
+An in-memory store for saving access tokens.
+
+## Usage
+
+```js
+var tokenstore = require('cahoots-api-tokenstore')();
+
+var payload = {
+    username: 'caiifr',
+    realname: 'André König',
+    email: 'andre@cahoots.ninja'
+};
+
+var token = tokenstore.put(payload);
+
+console.log(tokenstore.exists(token)); // => true
+console.log(tokenstore.valid(token)); // => true
+
+```
+
+## API
+
+### `put(payload)`
+
+Inserts a payload and generates a token out of it.
+
+### `exists(token)`
+
+Checks if a given token is in the store.
+
+### `valid(token)`
+
+Checks if the given token is still valid.
+
+## License
+
 The MIT License (MIT)
 
 Copyright (c) 2014-2015 Cahoots, Germany <info@cahoots.pw>

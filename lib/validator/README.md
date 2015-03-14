@@ -1,3 +1,43 @@
+# Cahoots - RESTful API - Validator
+
+[JSON Schema](http://json-schema.org/) validator.
+
+## Usage
+
+```js
+var validator = require('cahoots-api-validator');
+
+var schema = {
+    type: 'object',
+    additionalProperties: false,
+    required: ['name', 'email'],
+    properties: {
+        name: {
+            type: 'string'
+        },
+        email: {
+            type: 'string'
+        }
+    }
+};
+
+var user = {
+    name: 'André König',
+    email: 'andre@cahoots.ninja'
+};
+
+validator(schema).check(user, function onCheck (err) {
+    if (err) {
+        return console.error('User not valid: ' + err.toString());
+    }
+
+    // Valid
+});
+
+```
+
+## License
+
 The MIT License (MIT)
 
 Copyright (c) 2014-2015 Cahoots, Germany <info@cahoots.pw>
