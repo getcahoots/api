@@ -2,7 +2,7 @@
 
 The service layer of the Cahoots backend.
 
-## Usage
+## Usage example
 
 ```js
 var services = require('cahoots-api-services');
@@ -66,6 +66,8 @@ function onAuth (err, account) {
         // Auth successful
     }
 }
+
+service.authenticate('andre@cahoots.ninja', 'test123', onAuth);
 
 ```
 
@@ -174,7 +176,7 @@ function onFind (err, persons) {
     console.log(persons); // Array with person objects (empty array when no person available).
 }
 
-service.findAll(onSave);
+service.findAll(onFind);
 ```
 
 #### `findById(id, callback)`
@@ -235,7 +237,7 @@ function onFind (err, organizations) {
     console.log(organizations); // Array with organization objects (empty array when no organization available).
 }
 
-service.findAll(onSave);
+service.findAll(onFind);
 ```
 
 #### `findById(id, callback)`
