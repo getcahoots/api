@@ -1,7 +1,7 @@
 {
   "name": "cahoots-api-services",
   "version": "1.0.0",
-  "description": "The service layer of the cahoots.pw api.",
+  "description": "The service layer of the Cahoots RESTful API.",
   "main": "index.js",
   "scripts": {
     "test": "gulp",
