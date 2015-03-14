@@ -67,8 +67,8 @@
     "debug": "^2.1.1",
     "jsonquery": "^0.1.6",
     "level-sublevel": "^6.4.0",
-    "leveldown": "^1.0.1",
-    "levelup": "git://github.com/rvagg/node-levelup#1.0.0-wip",
+    "leveldown": "^0.10.4",
+    "levelup": "^0.19.0",
     "mandatory": "^1.0.0",
     "verror": "^1.6.0"
   }
