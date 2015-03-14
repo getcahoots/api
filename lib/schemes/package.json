@@ -1,7 +1,7 @@
 {
   "name": "cahoots-api-schemes",
   "version": "1.0.0",
-  "description": "The schemes of the cahoots.pw data structures.",
+  "description": "The schemes of the Cahoots RESTful API data structures.",
   "main": "index.js",
   "scripts": {
     "test": "gulp",
