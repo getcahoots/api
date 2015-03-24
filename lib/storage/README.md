@@ -37,6 +37,7 @@ function onInsert (err, user) {
     console.log(user.id); // => 6016dfffa938f0a1dcb66d4630a975925fc4309b
 }
 
+dao.insert(user, onInsert);
 ```
 
 **Important note:** This method does not distinguish between several different object. Means, if you pass an already persisted object this method will store a second record with a different id in the database.
