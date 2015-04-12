@@ -1,5 +1,5 @@
-FROM iojs:1.2.0
-MAINTAINER André König <andre.koenig@posteo.de>
+FROM iojs:1.6.3
+MAINTAINER André König <andre@cahoots.ninja>
 
 RUN useradd --create-home cahoots
 
@@ -10,6 +10,6 @@ ENV PORT 8080
 
 WORKDIR /home/cahoots
 USER cahoots
-RUN npm i
+RUN npm i --production
 
 CMD "./bin/cahoots-api"

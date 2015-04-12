@@ -9,7 +9,7 @@
     "lint": "gulp lint",
     "specs": "gulp specs",
     "checkstyle": "gulp checkstyle",
-    "start": "npm install && ./bin/cahoots-api"
+    "start": "./bin/cahoots-api"
   },
   "pre-commit": [
     "lint",
@@ -60,10 +60,8 @@
   "homepage": "https://github.com/getcahoots/api",
   "dependencies": {
     "body-parser": "^1.10.1",
-    "cahoots-api-schemes": "file:./lib/schemes",
-    "cahoots-api-services": "file:./lib/services",
     "cahoots-api-tokenstore": "file:./lib/tokenstore",
-    "cahoots-api-validator": "file:./lib/validator",
+    "cahoots-provider": "^1.0.0-beta.0",
     "cors": "^2.5.3",
     "debug": "^2.1.1",
     "express": "^4.10.7",

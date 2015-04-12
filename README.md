@@ -12,6 +12,12 @@ Please note that you need a current release (1.x) of [io.js](https://iojs.org) i
 npm start
 ```
 
+## Configuration
+
+  * `CAHOOTS_PROVIDER_OFFICIAL_DATABASE_PATH`: The path to the Cahoots database.
+  * `CAHOOTS_PROVIDER_TORIAL_DATABASE_PATH`: The path to the internal torial database.
+  * `CAHOOTS_PROVIDER_TORIAL_SYNC_INTERVAL`: The sync interval in ms. Default `(60 * 1000) * 60 * 24` (24h).
+
 ### Debug log messages
 
 You can set an environment variable in order to see some debug log messages:
@@ -22,11 +28,7 @@ DEBUG=cahoots:* npm start
 
 ## Submodule documentations
 
-  * [api/validator](https://github.com/getcahoots/api/blob/master/lib/validator/README.md)
   * [api/tokenstore](https://github.com/getcahoots/api/blob/master/lib/tokenstore/README.md)
-  * [api/storage](https://github.com/getcahoots/api/blob/master/lib/storage/README.md)
-  * [api/services](https://github.com/getcahoots/api/blob/master/lib/services/README.md)
-  * [api/schemes](https://github.com/getcahoots/api/blob/master/lib/schemes/README.md)
 
 ## License
 
