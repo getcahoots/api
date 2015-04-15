@@ -60,7 +60,6 @@
   "homepage": "https://github.com/getcahoots/api",
   "dependencies": {
     "body-parser": "^1.10.1",
-    "cahoots-api-tokenstore": "file:./lib/tokenstore",
     "cahoots-provider": "^1.0.0-beta.1",
     "cors": "^2.5.3",
     "debug": "^2.1.1",
