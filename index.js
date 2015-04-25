@@ -1,5 +1,5 @@
 /*
- * cahoots-api
+ * @getcahoots/api
  *
  * Copyright Cahoots.pw
  * MIT Licensed
