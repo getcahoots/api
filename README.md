@@ -29,10 +29,6 @@ You can set an environment variable in order to see some debug log messages:
 DEBUG=cahoots:* npm start
 ```
 
-## Submodule documentations
-
-  * [api/tokenstore](https://github.com/getcahoots/api/blob/master/lib/tokenstore/README.md)
-
 ## License
 
 The MIT License (MIT)
