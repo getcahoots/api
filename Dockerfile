@@ -1,4 +1,4 @@
-FROM iojs:1.6.3
+FROM iojs:2.2
 MAINTAINER André König <andre@cahoots.ninja>
 
 RUN useradd --create-home cahoots

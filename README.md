@@ -2,11 +2,9 @@
 
 This repository contains the API of the [cahoots.pw](http://cahoots.pw) project.
 
-You find a rough architecture description in the [wiki](https://github.com/getcahoots/api/wiki).
-
 ## Usage
 
-Please note that you need a current release (1.x) of [io.js](https://iojs.org) in order to run the Cahoots RESTful API. You can start the API with:
+Please note that you need a current release (2.x) of [io.js](https://iojs.org) in order to run the Cahoots RESTful API. You can start the API with:
 
 ```sh
 npm start

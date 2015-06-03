@@ -1,6 +1,6 @@
 {
   "name": "@getcahoots/api",
-  "version": "2.0.0-beta",
+  "version": "2.0.0",
   "description": "The cahoots.pw RESTful API",
   "main": "index.js",
   "bin": "./bin/cahoots-api",
@@ -9,10 +9,10 @@
     "lint": "gulp lint",
     "specs": "gulp specs",
     "checkstyle": "gulp checkstyle",
-    "start": "./bin/cahoots-api"
+    "start": "npm i && ./bin/cahoots-api"
   },
   "engine": {
-    "iojs": "^1.8.0"
+    "iojs": "^2.0.0"
   },
   "repository": {
     "type": "git",
@@ -55,7 +55,7 @@
   "homepage": "https://github.com/getcahoots/api",
   "dependencies": {
     "body-parser": "^1.10.1",
-    "@getcahoots/provider": "^1.0.0-beta.4",
+    "@getcahoots/provider": "^1.0.0",
     "cors": "^2.5.3",
     "debug": "^2.1.1",
     "express": "^4.10.7",
