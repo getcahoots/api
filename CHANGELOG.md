@@ -1,4 +1,4 @@
-# UNRELEASED
+# 2.0.0 (2015-06-03)
 
   * 5d09b6f bugfix: correct handling of the `ids` query param (#16).
   * 25f9d0d bugfix: missing service declaration
