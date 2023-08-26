@@ -1,3 +1,5 @@
+note: The Cahoots project has been discontinued. 
+
 # Cahoots - RESTful API
 
 This repository contains the API of the [cahoots.pw](http://cahoots.pw) project.
